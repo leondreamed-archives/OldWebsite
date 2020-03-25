@@ -1,0 +1,67 @@
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  font-weight: bold;
+}
+
+.tab-container-tab {
+  padding: 10px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+
+.tab-container-tab:hover {
+  color: orange;
+}
+
+.tab-container-logo {
+  height: 30px;
+  margin: 0 10px;
+}
+
+.tab-container-logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.tab-container-icons {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tab-container-bell {
+  padding: 5px;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+@keyframes ring-bell {
+  from {transform: rotate(10deg);}
+  to {transform: rotate(-10deg);}
+}
+
+.tab-container-bell:hover {
+  transform: rotate(10deg);
+  animation-name: ring-bell;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+#_tab-container .tab-container {
+  justify-content: center;
+  position: absolute;
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  background-color: rgba(0,0,0,0);
+}
+
+#_announcements-banner .announcements-banner {
+  border-radius: 20px;
+}

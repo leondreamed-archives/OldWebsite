@@ -1,0 +1,83 @@
+.article-box-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.article-box:nth-child(even) {
+  justify-self: start;
+}
+
+.article-box:nth-child(odd) {
+  justify-self: end;
+}
+
+
+
+.article-box {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  max-height: 50vw;
+  height: 20vh;
+  width: 100%;
+  max-width: 720px;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+}
+
+.article-box:hover {
+  color: orange;
+}
+
+.article-box:hover .img {
+  opacity: 0.8;
+}
+
+.article-box > .info {
+  padding: 0 10px;
+  float: right;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+}
+
+.article-box .title {
+  font-size: 2vw;
+  margin: 0;
+  padding-top: 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+
+.article-box .desc {
+  padding: 5px;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.article-box .img  {
+  float: left;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  
+}
+
+@media only screen and (max-width: 720px) {
+  .article-box-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .article-box {
+    justify-self: center;
+  }
+  .article-box .title {
+    font-size: 25px;
+  }
+  .article-box .desc {
+    font-size: 12px;
+  }
+}
